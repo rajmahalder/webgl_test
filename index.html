@@ -19,7 +19,7 @@
           onsuccess();
         }
       }
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build_02.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build_05.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
@@ -38,12 +38,10 @@
       document.addEventListener('onARSupportedCheck', function (event) {
         enterARButton.disabled = !event.detail.supported;
       }, false);
-     
       
       enterARButton.addEventListener('click', function (event) {
         document.dispatchEvent(new CustomEvent('toggleAR', {}));
       }, false);
-     
     </script>
     <script src="gl-matrix-min.js"></script>
     <script src="webxr.js"></script>
